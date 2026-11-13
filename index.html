@@ -1,313 +1,712 @@
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
-  <meta name="google-site-verification" content="oViDSAkLi4KCKucyXjgtbwKcZXrIWaIuS4CHrjmdDo4" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#211914">
-<meta name="description" content="SD.digitalstudio crée des sites web modernes, des landing pages et des boutiques en ligne.">
-<title>SD.digitalstudio | Digital Experiences</title>
+<meta name="description" content="SD.digitalstudio — Creative Studio spécialisé en Web Design, UI/UX Design et expériences digitales.">
+<title>SD.digitalstudio | Creative Digital Studio</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--dark:#211914;--brown:#39291f;--gold:#c99b6b;--cream:#f6f0e8;--white:#fffdf9;--muted:#81766c}
+:root{
+  --dark:#211914;
+  --brown:#3B2B22;
+  --brown2:#6B4F3B;
+  --lavender:#D8B4FE;
+  --silver:#C0C0C0;
+  --cream:#F5F0E9;
+  --white:#FFFCF8;
+  --muted:#81766c;
+  --line:#e7ddd2;
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);line-height:1.65;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-button{font:inherit;cursor:pointer}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
 .container{width:min(1120px,90%);margin:auto}
-header{height:82px;display:flex;align-items:center;background:rgba(246,240,232,.94);position:sticky;top:0;z-index:20;border-bottom:1px solid #e8ded2;backdrop-filter:blur(12px)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:22px;font-weight:700;letter-spacing:-1px}
-.logo span{color:var(--gold)}
-.navlinks{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:600}
-.navlinks a:hover{color:#a87548}
-.navright{display:flex;align-items:center;gap:15px}
-.lang{border:1px solid #d8c9b8;background:transparent;border-radius:30px;padding:8px 13px;font-size:12px}
-.menu{display:none;background:none;border:0;font-size:25px}
-.hero{background:var(--dark);color:var(--white);padding:105px 0 100px;overflow:hidden;position:relative}
-.hero:before{content:"";position:absolute;width:500px;height:500px;border:1px solid #8b684b;border-radius:50%;right:-180px;top:-170px;opacity:.25}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center;position:relative}
-.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:22px}
 h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.15}
-h1{font-size:clamp(42px,5.4vw,67px);max-width:650px}
-h1 span{color:var(--gold)}
-.hero p{color:#d2c5b8;max-width:480px;margin:25px 0 30px;font-size:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:5px;background:var(--gold);color:#211914;font-weight:700;font-size:13px;transition:.25s;border:1px solid var(--gold)}
-.btn:hover{background:#e0b88f;transform:translateY(-2px)}
-.btn-outline{background:transparent;color:var(--white);border-color:#786453;margin-left:10px}
-.visual{min-height:350px;display:flex;align-items:center;justify-content:center;position:relative}
-.visual-card{width:100%;max-width:430px;background:linear-gradient(145deg,#49362a,#2b201a);border:1px solid #806347;border-radius:15px;padding:20px;box-shadow:0 30px 70px #0005;transform:rotate(-3deg)}
-.visual-top{display:flex;justify-content:space-between;color:#d9c5ae;font-size:10px;letter-spacing:2px;margin-bottom:18px}
-.visual-screen{background:#e9ded0;border-radius:8px;padding:28px 22px;min-height:230px;color:var(--dark);display:flex;flex-direction:column;justify-content:space-between}
-.visual-screen small{letter-spacing:3px;color:#98724e}
-.visual-screen strong{font-family:'Playfair Display',serif;font-size:32px;line-height:1.1;max-width:250px}
-.visual-screen span{font-size:10px;letter-spacing:2px}
-.visual-tag{position:absolute;bottom:5px;right:-5px;background:var(--gold);padding:13px 18px;border-radius:5px;font-size:12px;font-weight:700}
-section{padding:90px 0}
-.section-head{text-align:center;max-width:650px;margin:0 auto 48px}
+.eyebrow{color:var(--lavender);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+
+/* HEADER */
+header{height:78px;display:flex;align-items:center;background:rgba(245,240,233,.94);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:22px;font-weight:800;letter-spacing:-1px;white-space:nowrap}
+.logo span{color:var(--brown2)}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:600}
+.navlinks a{transition:.25s}
+.navlinks a:hover{color:var(--brown2)}
+.navright{display:flex;align-items:center;gap:12px}
+.lang{border:1px solid #d5c8ba;background:transparent;border-radius:30px;padding:8px 14px;font-size:12px;font-weight:700;color:var(--dark)}
+.menu{display:none;border:0;background:none;font-size:25px;color:var(--dark)}
+
+/* HERO */
+.hero{background:var(--dark);color:var(--white);padding:95px 0 90px;position:relative;overflow:hidden;isolation:isolate}
+.hero:before{content:"";position:absolute;width:600px;height:600px;border:1px solid rgba(216,180,254,.18);border-radius:50%;right:-240px;top:-270px;z-index:-1}
+.hero:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:var(--lavender);opacity:.08;filter:blur(100px);left:-170px;bottom:-180px;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(40px,5.2vw,65px);max-width:620px;letter-spacing:-1.5px}
+.hero h1 span{color:var(--lavender)}
+.hero-copy{color:#d2c5b8;max-width:470px;margin:24px 0 30px;font-size:15px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:5px;background:var(--lavender);color:var(--dark);font-weight:700;font-size:12px;border:1px solid var(--lavender);transition:.3s}
+.btn:hover{transform:translateY(-3px);background:#e6d0ff;box-shadow:0 10px 25px #0002}
+.btn-outline{background:transparent;color:var(--white);border-color:#77695e}
+.btn-outline:hover{background:rgba(216,180,254,.1);color:var(--lavender)}
+.hero-note{margin-top:25px;display:flex;align-items:center;gap:10px;color:#b9aaa0;font-size:11px}
+.hero-note span{width:7px;height:7px;border-radius:50%;background:var(--lavender);box-shadow:0 0 12px var(--lavender)}
+
+/* CINEMATIC 3D SHOWCASE */
+.visual{
+  min-height:480px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  isolation:isolate;
+  perspective:1200px;
+  transform-style:preserve-3d;
+  --mouse-x:0deg;
+  --mouse-y:0deg;
+}
+.visual-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:var(--lavender);opacity:.13;filter:blur(85px);z-index:-1}
+.visual-ring{position:absolute;width:340px;height:340px;border:1px solid rgba(216,180,254,.25);border-radius:50%;z-index:-1;animation:ringPulse 7s ease-in-out infinite}
+@keyframes ringPulse{0%,100%{transform:scale(1);opacity:.35}50%{transform:scale(1.1);opacity:.8}}
+.visual-label{position:absolute;top:13px;left:0;color:var(--lavender);font-size:9px;letter-spacing:2px;font-weight:700}
+.visual-label:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--lavender);margin-right:8px;box-shadow:0 0 10px var(--lavender)}
+
+/* LAPTOP 3D */
+.laptop{
+  position:relative;
+  width:85%;
+  max-width:440px;
+  z-index:2;
+  transform-style:preserve-3d;
+  transform:rotateY(-13deg) rotateX(5deg) translate3d(0,0,0);
+  animation:floatLaptop 7s ease-in-out infinite;
+  will-change:transform;
+}
+@keyframes floatLaptop{
+  0%,100%{transform:rotateY(-13deg) rotateX(5deg) translate3d(0,-7px,0)}
+  50%{transform:rotateY(-10deg) rotateX(3deg) translate3d(0,-19px,12px)}
+}
+.laptop-screen{
+  padding:8px;
+  background:linear-gradient(135deg,#f0f0f0,#858585 45%,#d6d6d6);
+  border-radius:11px 11px 4px 4px;
+  box-shadow:0 35px 75px #0009,0 0 0 1px #ffffff55;
+  transform:translateZ(12px);
+}
+.browser{height:24px;display:flex;align-items:center;gap:9px;padding:0 9px;background:#29211d;color:#bcb0a7;font-size:8px;border-radius:5px 5px 0 0}
+.browser-dots{display:flex;gap:4px}
+.browser-dots i{width:5px;height:5px;border-radius:50%;background:var(--lavender)}
+.browser-address{margin-left:7px;opacity:.75}
+.preview-site{
+  height:255px;
+  background:var(--cream);
+  color:var(--brown);
+  position:relative;
+  overflow:hidden;
+  perspective:800px;
+}
+.preview-slide{
+  position:absolute;
+  inset:0;
+  padding:17px 18px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateX(35px) scale(.97);
+  transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1),visibility .8s;
+}
+.preview-slide.active{opacity:1;visibility:visible;transform:translateX(0) scale(1);z-index:2}
+.preview-nav{display:flex;align-items:center;justify-content:space-between;font-size:8px;position:relative;z-index:2}
+.preview-nav strong{letter-spacing:1px}
+.preview-nav span{font-size:7px;color:#77695e}
+.preview-content{margin-top:39px;position:relative;z-index:2}
+.preview-content small{font-size:7px;color:#8064a1;letter-spacing:2px;font-weight:700}
+.preview-content h2{font-size:clamp(24px,3vw,34px);line-height:1.05;margin:10px 0;max-width:230px}
+.preview-content p{font-size:8px;color:#77695e;margin:0 0 12px;max-width:180px}
+.preview-button{display:inline-block;background:var(--brown);color:white;padding:8px 12px;font-size:7px;letter-spacing:1px}
+.preview-art{position:absolute;width:115px;height:150px;right:15px;bottom:10px;background:linear-gradient(145deg,var(--lavender),var(--brown2));border-radius:65px 65px 7px 7px;transform:rotate(-9deg);opacity:.78}
+.slide-two{background:#e9ded0}
+.slide-two .preview-art{background:linear-gradient(145deg,#b68d66,#3b2b22);border-radius:8px;transform:rotate(7deg);height:130px}
+.slide-two .preview-content h2{color:#493326}
+.slide-three{background:#27202c;color:#fff}
+.slide-three .preview-nav span,.slide-three .preview-content p{color:#d1c3d8}
+.slide-three .preview-content small{color:var(--lavender)}
+.slide-three .preview-content h2{color:#fff}
+.slide-three .preview-button{background:var(--lavender);color:var(--dark)}
+.slide-three .preview-art{background:linear-gradient(145deg,#d8b4fe,#73518e);border-radius:50%;width:125px;height:125px;bottom:25px}
+.laptop-base{width:112%;height:9px;margin-left:-6%;background:linear-gradient(#dedede,#777);border-radius:2px 2px 12px 12px;box-shadow:0 13px 20px #0005;transform:translateZ(5px)}
+
+/* PHONE */
+.phone{
+  position:absolute;width:105px;height:210px;right:0;bottom:58px;padding:6px;
+  background:#171411;border:2px solid #bdbdbd;border-radius:18px;z-index:4;
+  box-shadow:0 18px 40px #0007,0 0 0 1px #ffffff22;
+  transform:rotateY(-8deg) rotateZ(7deg);
+  animation:floatPhone 5.5s ease-in-out infinite;
+  transform-style:preserve-3d;
+}
+@keyframes floatPhone{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -14px;rotate:1deg}}
+.phone-camera{position:absolute;top:7px;left:50%;transform:translateX(-50%);width:28px;height:6px;border-radius:10px;background:#171411;z-index:2}
+.phone-screen{height:100%;padding:22px 8px 8px;border-radius:11px;background:var(--cream);color:var(--brown);overflow:hidden;transition:background .6s}
+.phone-screen strong{font-size:7px}
+.phone-art{height:66px;margin-top:12px;border-radius:5px;background:linear-gradient(135deg,var(--brown2),var(--lavender));transition:background .7s,transform .7s}
+.phone-screen h3{font-size:16px;margin-top:11px;line-height:1.05}
+.phone-screen p{color:#77695e;font-size:7px;margin-top:5px}
+.phone-button{margin-top:9px;padding:6px;text-align:center;color:white;background:var(--brown);font-size:7px;transition:background .7s}
+
+/* FLOATING CARD */
+.floating-card{position:absolute;left:-4px;bottom:70px;z-index:5;display:flex;align-items:center;gap:9px;padding:11px 13px;border-radius:7px;background:var(--cream);color:var(--brown);box-shadow:0 12px 30px #0004;animation:floatCard 6s ease-in-out infinite}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.floating-star{font-size:23px;color:#8064a1}
+.floating-card strong,.floating-card small{display:block}
+.floating-card strong{font-size:9px}
+.floating-card small{font-size:7px;color:#82766c}
+.visual-caption{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:space-between;color:#a99b90;font-size:8px;letter-spacing:1px}
+
+/* GEOMETRIC DECORATIONS */
+.geometry{position:absolute;z-index:0;pointer-events:none}
+.geometry-circle{width:38px;height:38px;border:1px solid rgba(216,180,254,.55);border-radius:50%;top:75px;right:40px;animation:rotateGeometry 12s linear infinite}
+.geometry-square{width:23px;height:23px;border:1px solid var(--lavender);transform:rotate(35deg);bottom:100px;left:35px;animation:rotateGeometry 15s linear infinite}
+.geometry-cross{color:var(--lavender);font-size:35px;top:45%;right:5px;opacity:.6}
+@keyframes rotateGeometry{to{rotate:360deg}}
+
+/* GENERAL SECTIONS */
+section{padding:88px 0}
+.section-head{max-width:660px;margin:0 auto 45px;text-align:center}
 .section-head .eyebrow{margin-bottom:13px}
-.section-head h2{font-size:clamp(32px,4vw,44px)}
-.section-head p{color:var(--muted);margin-top:14px;font-size:14px}
+.section-head h2{font-size:clamp(31px,4vw,44px)}
+.section-head p{margin-top:14px;color:var(--muted);font-size:14px}
+.section-head.light h2{color:var(--white)}
+.section-head.light p{color:#c6b8a9}
+
+/* SERVICES */
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service{background:var(--white);padding:30px 25px;border:1px solid #eadfd2;border-radius:8px;transition:.25s}
-.service:hover{transform:translateY(-6px);box-shadow:0 15px 35px #39291f12}
-.service-icon{width:47px;height:47px;border-radius:50%;background:#f1e5d7;display:grid;place-items:center;font-size:21px;margin-bottom:23px}
+.service{background:var(--white);padding:30px 25px;border:1px solid var(--line);border-radius:8px;transition:.3s}
+.service:hover{transform:translateY(-7px);box-shadow:0 18px 40px #39291f12;border-color:#cbb6df}
+.service-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#eee3f6;color:#8064a1;font-size:23px;margin-bottom:22px}
 .service h3{font-size:23px;margin-bottom:12px}
 .service p{color:var(--muted);font-size:13px}
-.service .more{display:inline-block;margin-top:20px;color:#9b704b;font-weight:700;font-size:12px}
-.portfolio{background:#eee5da}
+.more{display:inline-block;margin-top:20px;color:var(--brown2);font-size:12px;font-weight:700}
+
+/* PORTFOLIO */
+.portfolio{background:var(--dark);color:var(--white)}
+.portfolio .section-head p{color:#c6b8a9}
 .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.project{border-radius:8px;overflow:hidden;background:var(--white);border:1px solid #e4d8ca}
-.project-art{height:210px;padding:20px;display:flex;align-items:center;justify-content:center}
-.art-one{background:linear-gradient(135deg,#30251e,#93684a)}
-.art-two{background:linear-gradient(135deg,#ddd0be,#a78c70)}
-.art-three{background:linear-gradient(135deg,#1d1d1d,#5c4b3c)}
-.mock{width:85%;height:145px;border:5px solid #f8f3ec;border-radius:6px;background:#f5eee5;padding:17px;color:#33271f;box-shadow:0 12px 20px #0003}
+.project{background:#2c211b;border:1px solid #514237;border-radius:8px;overflow:hidden;transition:.3s}
+.project:hover{transform:translateY(-6px)}
+.project-art{height:220px;padding:20px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.art-one{background:linear-gradient(135deg,#30251e,#80604c)}
+.art-two{background:linear-gradient(135deg,#e4d9cc,#9c8571)}
+.art-three{background:linear-gradient(135deg,#211914,#594b64)}
+.project-art:before{content:"";position:absolute;width:130px;height:130px;border:1px solid rgba(255,255,255,.35);border-radius:50%;top:-45px;right:-25px}
+.project-art:after{content:"";position:absolute;width:65px;height:65px;border:1px solid rgba(255,255,255,.35);transform:rotate(45deg);bottom:-25px;left:20px}
+.mock{width:88%;height:145px;border:5px solid #e8e1d8;border-radius:6px;background:#f5f0e9;padding:18px;color:#33271f;box-shadow:0 12px 25px #0004;transition:.4s;position:relative;z-index:1}
+.project:hover .mock{transform:scale(1.05) rotate(-1deg)}
 .mock b{font-family:Georgia,serif;font-size:20px}
 .mock small{display:block;font-size:8px;margin-top:12px;letter-spacing:2px}
 .project-info{padding:20px}
-.project-info h3{font-size:20px}
-.project-info p{font-size:12px;color:var(--muted);margin-top:5px}
-.concept{font-size:10px;color:#9b704b;font-weight:700;letter-spacing:1px}
+.concept{color:var(--lavender);font-size:9px;font-weight:700;letter-spacing:1px}
+.project-info h3{font-size:20px;margin-top:7px}
+.project-info p{font-size:12px;color:#c2b4a8;margin-top:6px}
+
+/* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-box{background:var(--dark);color:var(--white);padding:40px;border-radius:8px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
-.about-box strong{font-family:'Playfair Display',serif;font-size:36px;color:var(--gold)}
-.about-box span{font-size:12px;color:#d6c7b8;letter-spacing:2px}
+.about-box{min-height:310px;padding:38px;border-radius:8px;color:var(--white);background:radial-gradient(circle at 80% 20%,#8064a155,transparent 38%),linear-gradient(145deg,#3b2b22,#211914);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.about-box:after{content:"SD";position:absolute;right:-10px;bottom:-70px;font-family:'Playfair Display',serif;font-size:220px;color:#ffffff08;font-weight:700}
+.about-box strong{font-family:'Playfair Display',serif;font-size:36px;line-height:1.15;max-width:320px;color:var(--lavender);position:relative;z-index:1}
+.about-box span{font-size:10px;color:#d6c7b8;letter-spacing:2px;position:relative;z-index:1}
 .about-text h2{font-size:40px;margin-bottom:20px}
 .about-text p{color:var(--muted);font-size:14px;margin-bottom:14px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
-.feature{border-left:2px solid var(--gold);padding-left:12px;font-size:12px;font-weight:700}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:28px}
+.feature{border-left:2px solid var(--brown2);padding-left:10px;font-size:11px;font-weight:700}
+
+/* PROCESS */
 .process{background:var(--dark);color:var(--white)}
-.process .section-head p{color:#c6b8a9}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .step{border-top:1px solid #655141;padding-top:22px}
-.step-num{color:var(--gold);font-size:12px;letter-spacing:2px}
+.step-num{color:var(--lavender);font-size:11px;letter-spacing:2px}
 .step h3{font-size:21px;margin:14px 0 10px}
 .step p{font-size:12px;color:#c6b8a9}
+
+/* FAQ */
 .faq-list{max-width:760px;margin:auto}
 details{padding:20px 0;border-bottom:1px solid #dfd4c8}
 summary{font-weight:700;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:15px}
-summary:after{content:"+";color:#a87548;font-size:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:#8064a1;font-size:20px;line-height:1}
 details[open] summary:after{content:"−"}
 details p{color:var(--muted);font-size:13px;padding-top:13px}
-.contact{background:#eee5da}
+
+/* CONTACT */
+.contact{background:#eae1d7}
 .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
 .contact-info h2{font-size:40px;margin-bottom:15px}
 .contact-info p{color:var(--muted);font-size:14px;margin-bottom:25px}
-.contact-link{display:flex;align-items:center;gap:12px;margin:18px 0;font-size:14px;font-weight:600}
-.contact-link span{width:40px;height:40px;background:var(--white);border-radius:50%;display:grid;place-items:center}
-.form{background:var(--white);padding:30px;border-radius:8px;border:1px solid #e5d9cc}
+.contact-link{display:flex;align-items:center;gap:12px;margin:18px 0;font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.contact-link span{flex-shrink:0;width:40px;height:40px;background:var(--white);border-radius:50%;display:grid;place-items:center;color:var(--brown2);font-size:18px}
+.form{background:var(--white);padding:30px;border-radius:8px;border:1px solid #e5d9cc;box-shadow:0 15px 35px #39291f09}
 .form label{display:block;font-size:12px;font-weight:700;margin-bottom:7px}
-.form input,.form select,.form textarea{width:100%;padding:13px;border:1px solid #e4d9cd;background:#fcfaf7;border-radius:4px;font:inherit;font-size:13px;margin-bottom:17px;outline:none}
-.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--gold)}
+.form input,.form select,.form textarea{width:100%;padding:13px;border:1px solid #e4d9cd;background:#fcfaf7;border-radius:4px;font:inherit;font-size:13px;margin-bottom:17px;outline:none;color:var(--dark)}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:#9b7ab6;box-shadow:0 0 0 3px #d8b4fe25}
 .form textarea{min-height:110px;resize:vertical}
 .form button{width:100%;border:0}
-footer{background:#1b1511;color:#e9dfd4;padding:40px 0}
+
+/* FOOTER */
+footer{background:#17120f;color:#e9dfd4;padding:40px 0 25px}
 .footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 footer p{font-size:12px;color:#b5a699;margin-top:8px}
 .footer-links{display:flex;gap:18px;font-size:12px}
+.footer-links a:hover{color:var(--lavender)}
 .copyright{border-top:1px solid #49382c;margin-top:30px;padding-top:20px;color:#9d8c7e;font-size:11px}
-.whatsapp{position:fixed;bottom:20px;right:20px;width:55px;height:55px;border-radius:50%;background:#25d366;color:white;display:grid;place-items:center;font-size:25px;z-index:30;box-shadow:0 5px 20px #0003}
-[dir="rtl"]{font-family:'DM Sans',sans-serif}
+
+/* WHATSAPP */
+.whatsapp{position:fixed;bottom:20px;right:20px;width:54px;height:54px;border-radius:50%;background:#25d366;color:white;display:grid;place-items:center;font-size:25px;z-index:90;box-shadow:0 5px 20px #0003;transition:.2s}
+.whatsapp:hover{transform:scale(1.08)}
+
+/* RTL */
+[dir="rtl"] body{font-family:'DM Sans',sans-serif}
 [dir="rtl"] .eyebrow{letter-spacing:0}
-[dir="rtl"] .feature{border-left:0;border-right:2px solid var(--gold);padding-left:0;padding-right:12px}
-[dir="rtl"] .btn-outline{margin-left:0;margin-right:10px}
-[dir="rtl"] .visual-tag{right:auto;left:-5px}
+[dir="rtl"] .feature{border-left:0;border-right:2px solid var(--brown2);padding-left:0;padding-right:10px}
+[dir="rtl"] .visual-label{left:auto;right:0}
+[dir="rtl"] .visual-label:before{margin-right:0;margin-left:8px}
+[dir="rtl"] .floating-card{left:auto;right:-4px}
+[dir="rtl"] .visual-caption{direction:ltr}
 [dir="rtl"] .whatsapp{right:auto;left:20px}
-@media(max-width:800px){
-.navlinks{display:none;position:absolute;top:81px;left:0;width:100%;background:var(--cream);padding:22px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e5d9cc}
-.navlinks.open{display:flex}
-.menu{display:block}
-.hero{padding:75px 0}
-.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-.visual{min-height:290px}
-.services,.projects{grid-template-columns:1fr 1fr}
-.steps{grid-template-columns:1fr 1fr}
-.about-grid{gap:30px}
+[dir="rtl"] .phone{right:auto;left:0}
+[dir="rtl"] .preview-art{right:auto;left:15px}
+[dir="rtl"] .hero-note{direction:rtl}
+[dir="rtl"] .contact-link{direction:rtl}
+[dir="rtl"] .navlinks{direction:rtl}
+[dir="rtl"] .footer-links{direction:rtl}
+
+/* TABLET */
+@media(max-width:900px){
+  .navlinks{gap:15px;font-size:12px}
+  .hero-grid{gap:25px}
+  .visual{min-height:390px}
+  .about-grid{gap:35px}
+  .contact-grid{gap:25px}
 }
+
+/* MOBILE MENU */
+@media(max-width:800px){
+  .navlinks{display:none;position:absolute;top:77px;left:0;width:100%;background:var(--cream);padding:22px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line);box-shadow:0 15px 25px #0000000b}
+  .navlinks.open{display:flex}
+  .menu{display:block}
+  .hero{padding:70px 0 65px}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-grid{gap:35px}
+  .hero-copy{max-width:550px}
+  .visual{min-height:390px}
+  .about-grid{gap:30px}
+  .services,.projects{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+
+/* SMALL MOBILE */
 @media(max-width:520px){
-.services,.projects,.features{grid-template-columns:1fr}
-.hero h1{font-size:43px}
-.hero p{font-size:14px}
-section{padding:70px 0}
-.steps{grid-template-columns:1fr 1fr}
-.form{padding:22px}
-.footer-links{flex-wrap:wrap}
+  .container{width:90%}
+  header{height:70px}
+  .logo{font-size:19px}
+  .navlinks{top:69px}
+  .hero{padding:62px 0 55px}
+  .hero h1{font-size:42px}
+  .hero-copy{font-size:14px;margin:20px 0 25px}
+  .hero-actions{gap:9px}
+  .hero-actions .btn{padding:12px 14px;font-size:11px}
+  .visual{min-height:340px;perspective:900px}
+  .laptop{width:83%}
+  .preview-site{height:205px}
+  .preview-slide{padding:14px}
+  .preview-content{margin-top:30px}
+  .preview-content h2{font-size:25px}
+  .preview-art{width:85px;height:120px}
+  .phone{width:83px;height:165px;bottom:48px}
+  .phone-art{height:48px}
+  .phone-screen h3{font-size:14px}
+  .floating-card{bottom:55px;padding:8px}
+  .floating-card strong{font-size:8px}
+  .floating-card small{font-size:7px}
+  .visual-caption{font-size:7px}
+  .geometry-circle{right:10px}
+  section{padding:68px 0}
+  .services,.projects,.features{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr;gap:22px 15px}
+  .about-box{min-height:260px;padding:28px}
+  .about-box strong{font-size:31px}
+  .about-text h2,.contact-info h2{font-size:34px}
+  .form{padding:22px}
+  .footer-row{align-items:flex-start;flex-direction:column}
+  .footer-links{flex-wrap:wrap}
+  .whatsapp{width:50px;height:50px;bottom:15px;right:15px}
+  [dir="rtl"] .whatsapp{right:auto;left:15px}
+}
+
+/* ACCESSIBILITY */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="container nav">
-<a class="logo" href="#">SD<span>.</span>digitalstudio</a>
-<nav class="navlinks" id="navlinks">
-<a href="#home" data-i="nav1">Accueil</a>
-<a href="#services" data-i="nav2">Services</a>
-<a href="#portfolio" data-i="nav3">Réalisations</a>
-<a href="#about" data-i="nav4">À propos</a>
-<a href="#contact" data-i="nav5">Contact</a>
-</nav>
-<div class="navright">
-<button class="lang" id="langBtn">العربية</button>
-<button class="menu" id="menuBtn" aria-label="Menu">☰</button>
-</div>
-</div>
+  <div class="container nav">
+    <a class="logo" href="#home">SD<span>.</span>digitalstudio</a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home" data-i="nav1">Accueil</a>
+      <a href="#services" data-i="nav2">Services</a>
+      <a href="#portfolio" data-i="nav3">Réalisations</a>
+      <a href="#about" data-i="nav4">À propos</a>
+      <a href="#contact" data-i="nav5">Contact</a>
+    </nav>
+    <div class="navright">
+      <button class="lang" id="langBtn" type="button">العربية</button>
+      <button class="menu" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
 </header>
 
 <main>
+
+<!-- HERO -->
 <section class="hero" id="home">
-<div class="container hero-grid">
-<div>
-<div class="eyebrow" data-i="heroEyebrow">STUDIO DIGITAL CRÉATIF</div>
-<h1 data-i="heroTitle">Your business deserves a <span>powerful digital presence.</span></h1>
-<p data-i="heroDesc">Nous créons des expériences digitales élégantes pour développer votre activité.</p>
-<a class="btn" href="#services" data-i="heroBtn">Découvrir nos services ↗</a>
-<a class="btn btn-outline" href="#contact" data-i="heroContact">Parlons de votre projet</a>
-</div>
-<div class="visual">
-<div class="visual-card">
-<div class="visual-top"><span>SD.DIGITALSTUDIO</span><span>2026</span></div>
-<div class="visual-screen">
-<small>YOUR DIGITAL FUTURE</small>
-<strong>Make your brand unforgettable.</strong>
-<span>DESIGN · DEVELOP · GROW</span>
-</div>
-</div>
-<div class="visual-tag">We build your digital presence.</div>
-</div>
-</div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow" data-i="heroEyebrow">STUDIO DIGITAL CRÉATIF</div>
+      <h1 data-i="heroTitle">Your business deserves a <span>powerful digital presence.</span></h1>
+      <p class="hero-copy" data-i="heroDesc">Nous créons des expériences digitales élégantes pour développer votre activité.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#services" data-i="heroBtn">Découvrir nos services</a>
+        <a class="btn btn-outline" href="#contact" data-i="heroContact">Parlons de votre projet</a>
+      </div>
+      <div class="hero-note"><span></span><div data-i="heroNote">Design créatif · Expérience digitale · Résultats</div></div>
+    </div>
+
+    <!-- 3D CINEMATIC SHOWCASE -->
+    <div class="visual" id="heroVisual">
+      <div class="visual-glow"></div>
+      <div class="visual-ring"></div>
+      <div class="geometry geometry-circle"></div>
+      <div class="geometry geometry-square"></div>
+      <div class="geometry geometry-cross">✳</div>
+      <div class="visual-label">CREATIVE DIGITAL EXPERIENCE</div>
+
+      <div class="laptop" id="laptop">
+        <div class="laptop-screen">
+          <div class="browser">
+            <div class="browser-dots"><i></i><i></i><i></i></div>
+            <span class="browser-address">yourbrand.com</span>
+          </div>
+
+          <div class="preview-site">
+            <!-- SLIDE 1 -->
+            <div class="preview-slide active" data-slide="0">
+              <div class="preview-nav">
+                <strong>YOUR BRAND.</strong>
+                <span>HOME　 ABOUT　 CONTACT</span>
+              </div>
+              <div class="preview-content">
+                <small>DESIGN YOUR FUTURE</small>
+                <h2>Make Your Brand Stand Out.</h2>
+                <p>Creative websites. Powerful experiences.</p>
+                <div class="preview-button">DISCOVER MORE</div>
+              </div>
+              <div class="preview-art"></div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="preview-slide slide-two" data-slide="1">
+              <div class="preview-nav">
+                <strong>MAISON ÉLÉGANCE</strong>
+                <span>COLLECTION　 ABOUT</span>
+              </div>
+              <div class="preview-content">
+                <small>THE ART OF LIVING</small>
+                <h2>Elegance in Every Detail.</h2>
+                <p>Discover a world of timeless beauty.</p>
+                <div class="preview-button">EXPLORE COLLECTION</div>
+              </div>
+              <div class="preview-art"></div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="preview-slide slide-three" data-slide="2">
+              <div class="preview-nav">
+                <strong>ATELIER MODE</strong>
+                <span>SHOP　 NEW　 CONTACT</span>
+              </div>
+              <div class="preview-content">
+                <small>NEW SEASON / 2026</small>
+                <h2>Style Your Own Story.</h2>
+                <p>Discover the latest collection.</p>
+                <div class="preview-button">SHOP NOW</div>
+              </div>
+              <div class="preview-art"></div>
+            </div>
+          </div>
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+
+      <!-- PHONE MOCKUP -->
+      <div class="phone" id="phone">
+        <div class="phone-camera"></div>
+        <div class="phone-screen" id="phoneScreen">
+          <strong id="phoneBrand">YOUR BRAND.</strong>
+          <div class="phone-art" id="phoneArt"></div>
+          <h3 id="phoneTitle">Beautiful<br>by Design.</h3>
+          <p id="phoneDesc">Designed for your next big idea.</p>
+          <div class="phone-button" id="phoneButton">EXPLORE</div>
+        </div>
+      </div>
+
+      <div class="floating-card">
+        <span class="floating-star">✦</span>
+        <div>
+          <strong data-i="floatingTitle">Creative Design</strong>
+          <small data-i="floatingDesc">Made for your brand</small>
+        </div>
+      </div>
+
+      <div class="visual-caption">
+        <span>01 — DIGITAL DESIGN</span>
+        <span>SD.DIGITALSTUDIO</span>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow" data-i="servicesEyebrow">NOS EXPERTISES</div>
-<h2 data-i="servicesTitle">Des solutions digitales pour votre croissance.</h2>
-<p data-i="servicesDesc">Tout ce dont votre activité a besoin pour se démarquer en ligne.</p>
-</div>
-<div class="services">
-<div class="service"><div class="service-icon">✧</div><h3 data-i="s1title">Site Web</h3><p data-i="s1desc">Des sites web modernes, professionnels et adaptés à votre image de marque.</p><a href="#contact" class="more" data-i="learn">En savoir plus ↗</a></div>
-<div class="service"><div class="service-icon">▤</div><h3>Landing Page</h3><p data-i="s2desc">Des pages stratégiques conçues pour attirer l'attention et convertir vos visiteurs.</p><a href="#contact" class="more" data-i="learn">En savoir plus ↗</a></div>
-<div class="service"><div class="service-icon">◇</div><h3 data-i="s3title">E-commerce</h3><p data-i="s3desc">Des boutiques en ligne élégantes pour présenter et vendre vos produits.</p><a href="#contact" class="more" data-i="learn">En savoir plus ↗</a></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i="servicesEyebrow">NOS EXPERTISES</div>
+      <h2 data-i="servicesTitle">Des solutions digitales pour votre croissance.</h2>
+      <p data-i="servicesDesc">Tout ce dont votre activité a besoin pour se démarquer en ligne.</p>
+    </div>
+    <div class="services">
+      <div class="service">
+        <div class="service-icon">✧</div>
+        <h3 data-i="s1title">Site Web</h3>
+        <p data-i="s1desc">Des sites web modernes, professionnels et adaptés à votre image de marque.</p>
+        <a href="#contact" class="more" data-i="learn">En savoir plus</a>
+      </div>
+      <div class="service">
+        <div class="service-icon">▤</div>
+        <h3 data-i="s2title">Landing Page</h3>
+        <p data-i="s2desc">Des pages stratégiques conçues pour attirer l'attention et convertir vos visiteurs.</p>
+        <a href="#contact" class="more" data-i="learn">En savoir plus</a>
+      </div>
+      <div class="service">
+        <div class="service-icon">◇</div>
+        <h3 data-i="s3title">E-commerce</h3>
+        <p data-i="s3desc">Des boutiques en ligne élégantes pour présenter et vendre vos produits.</p>
+        <a href="#contact" class="more" data-i="learn">En savoir plus</a>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- PORTFOLIO -->
 <section class="portfolio" id="portfolio">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow" data-i="portfolioEyebrow">NOTRE UNIVERS</div>
-<h2 data-i="portfolioTitle">Quelques idées, un grand potentiel.</h2>
-<p data-i="portfolioDesc">Des exemples de concepts créatifs imaginés pour différentes activités.</p>
-</div>
-<div class="projects">
-<div class="project"><div class="project-art art-one"><div class="mock"><b>BAO'S</b><small>GOOD FOOD. GOOD MOOD.</small></div></div><div class="project-info"><span class="concept" data-i="concept">CONCEPT</span><h3 data-i="p1title">Restaurant & Food</h3><p data-i="p1desc">Un univers digital pour la restauration.</p></div></div>
-<div class="project"><div class="project-art art-two"><div class="mock"><b>Maison Élégance</b><small>SIMPLICITY IS LUXURY</small></div></div><div class="project-info"><span class="concept" data-i="concept">CONCEPT</span><h3 data-i="p2title">Brand Landing Page</h3><p data-i="p2desc">Une présentation raffinée pour une marque.</p></div></div>
-<div class="project"><div class="project-art art-three"><div class="mock"><b>SDL STREETWEAR</b><small>WEAR YOUR IDENTITY</small></div></div><div class="project-info"><span class="concept" data-i="concept">CONCEPT</span><h3 data-i="p3title">Fashion E-commerce</h3><p data-i="p3desc">Une boutique en ligne dédiée à la mode.</p></div></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-head light">
+      <div class="eyebrow" data-i="portfolioEyebrow">NOTRE UNIVERS</div>
+      <h2 data-i="portfolioTitle">Quelques idées, un grand potentiel.</h2>
+      <p data-i="portfolioDesc">Des exemples de concepts créatifs imaginés pour différentes activités.</p>
+    </div>
+    <div class="projects">
+      <div class="project">
+        <div class="project-art art-one"><div class="mock"><b>BAO'S</b><small>GOOD FOOD. GOOD MOOD.</small></div></div>
+        <div class="project-info"><span class="concept" data-i="concept">CONCEPT</span><h3 data-i="p1title">Restaurant & Food</h3><p data-i="p1desc">Un univers digital pour la restauration.</p></div>
+      </div>
+      <div class="project">
+        <div class="project-art art-two"><div class="mock"><b>Maison Élégance</b><small>SIMPLICITY IS LUXURY</small></div></div>
+        <div class="project-info"><span class="concept" data-i="concept">CONCEPT</span><h3 data-i="p2title">Brand Landing Page</h3><p data-i="p2desc">Une présentation raffinée pour une marque.</p></div>
+      </div>
+      <div class="project">
+        <div class="project-art art-three"><div class="mock"><b>ATELIER MODE</b><small>STYLE YOUR STORY</small></div></div>
+        <div class="project-info"><span class="concept" data-i="concept">CONCEPT</span><h3 data-i="p3title">Fashion E-commerce</h3><p data-i="p3desc">Une boutique en ligne dédiée à la mode.</p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-<div class="container about-grid">
-<div class="about-box"><span>SD.DIGITALSTUDIO — 2026</span><strong>We build your digital presence.</strong><span>IDEAS INTO DIGITAL EXPERIENCES.</span></div>
-<div class="about-text">
-<div class="eyebrow" data-i="aboutEyebrow">QUI SOMMES-NOUS ?</div>
-<h2 data-i="aboutTitle">Le digital, avec une vision.</h2>
-<p data-i="aboutP1">SD.digitalstudio accompagne les entrepreneurs et les marques dans la création de leur présence digitale.</p>
-<p data-i="aboutP2">Nous proposons des solutions modernes, élégantes et adaptées aux besoins de chaque projet.</p>
-<div class="features">
-<div class="feature" data-i="feature1">Design moderne</div>
-<div class="feature" data-i="feature2">Solutions sur mesure</div>
-<div class="feature" data-i="feature3">Accompagnement personnalisé</div>
-</div>
-</div>
-</div>
+  <div class="container about-grid">
+    <div class="about-box">
+      <span>SD.DIGITALSTUDIO — 2026</span>
+      <strong>We build your digital presence.</strong>
+      <span>IDEAS INTO DIGITAL EXPERIENCES.</span>
+    </div>
+    <div class="about-text">
+      <div class="eyebrow" data-i="aboutEyebrow">QUI SOMMES-NOUS ?</div>
+      <h2 data-i="aboutTitle">Le digital, avec une vision.</h2>
+      <p data-i="aboutP1">SD.digitalstudio accompagne les entrepreneurs et les marques dans la création de leur présence digitale.</p>
+      <p data-i="aboutP2">Nous proposons des solutions modernes, élégantes et adaptées aux besoins de chaque projet.</p>
+      <div class="features">
+        <div class="feature" data-i="feature1">Design moderne</div>
+        <div class="feature" data-i="feature2">Solutions sur mesure</div>
+        <div class="feature" data-i="feature3">Accompagnement personnalisé</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- PROCESS -->
 <section class="process">
-<div class="container">
-<div class="section-head">
-<div class="eyebrow" data-i="processEyebrow">COMMENT ÇA MARCHE</div>
-<h2 data-i="processTitle">De l'idée au lancement.</h2>
-<p data-i="processDesc">Un processus simple pour donner vie à votre projet.</p>
-</div>
-<div class="steps">
-<div class="step"><span class="step-num">01 /</span><h3 data-i="step1">Discussion</h3><p data-i="step1d">Nous échangeons sur votre idée et vos objectifs.</p></div>
-<div class="step"><span class="step-num">02 /</span><h3 data-i="step2">Design</h3><p data-i="step2d">Nous imaginons une expérience adaptée à votre marque.</p></div>
-<div class="step"><span class="step-num">03 /</span><h3 data-i="step3">Développement</h3><p data-i="step3d">Nous construisons et développons votre site.</p></div>
-<div class="step"><span class="step-num">04 /</span><h3 data-i="step4">Lancement</h3><p data-i="step4d">Votre projet est prêt à être publié en ligne.</p></div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-head light">
+      <div class="eyebrow" data-i="processEyebrow">COMMENT ÇA MARCHE</div>
+      <h2 data-i="processTitle">De l'idée au lancement.</h2>
+      <p data-i="processDesc">Un processus simple pour donner vie à votre projet.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-num">01 /</span><h3 data-i="step1">Discussion</h3><p data-i="step1d">Nous échangeons sur votre idée et vos objectifs.</p></div>
+      <div class="step"><span class="step-num">02 /</span><h3 data-i="step2">Design</h3><p data-i="step2d">Nous imaginons une expérience adaptée à votre marque.</p></div>
+      <div class="step"><span class="step-num">03 /</span><h3 data-i="step3">Développement</h3><p data-i="step3d">Nous construisons et développons votre site.</p></div>
+      <div class="step"><span class="step-num">04 /</span><h3 data-i="step4">Lancement</h3><p data-i="step4d">Votre projet est prêt à être publié en ligne.</p></div>
+    </div>
+  </div>
 </section>
 
+<!-- FAQ -->
 <section id="faq">
-<div class="container">
-<div class="section-head"><div class="eyebrow">FAQ</div><h2 data-i="faqTitle">Questions fréquentes.</h2></div>
-<div class="faq-list">
-<details><summary data-i="q1">Combien coûte la création d'un site web ?</summary><p data-i="a1">Chaque projet est différent. Contactez-nous pour recevoir un devis personnalisé selon vos besoins.</p></details>
-<details><summary data-i="q2">Combien de temps faut-il pour créer un site ?</summary><p data-i="a2">Le délai dépend du type de site, de ses fonctionnalités et du contenu à intégrer.</p></details>
-<details><summary data-i="q3">Le site sera-t-il adapté aux téléphones ?</summary><p data-i="a3">Oui, nos créations sont pensées pour les mobiles, tablettes et ordinateurs.</p></details>
-<details><summary data-i="q4">Puis-je demander des modifications ?</summary><p data-i="a4">Bien sûr. Les besoins et les modifications sont discutés ensemble avant la livraison.</p></details>
-</div>
-</div>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2 data-i="faqTitle">Questions fréquentes.</h2>
+    </div>
+    <div class="faq-list">
+      <details><summary data-i="q1">Combien coûte la création d'un site web ?</summary><p data-i="a1">Chaque projet est différent. Contactez-nous pour recevoir un devis personnalisé selon vos besoins.</p></details>
+      <details><summary data-i="q2">Combien de temps faut-il pour créer un site ?</summary><p data-i="a2">Le délai dépend du type de site, de ses fonctionnalités et du contenu à intégrer.</p></details>
+      <details><summary data-i="q3">Le site sera-t-il adapté aux téléphones ?</summary><p data-i="a3">Oui, nos créations sont pensées pour les mobiles, tablettes et ordinateurs.</p></details>
+      <details><summary data-i="q4">Puis-je demander des modifications ?</summary><p data-i="a4">Bien sûr. Les besoins et les modifications sont discutés ensemble avant la livraison.</p></details>
+    </div>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
-<div class="container contact-grid">
-<div class="contact-info">
-<div class="eyebrow" data-i="contactEyebrow">PARLONS DE VOTRE PROJET</div>
-<h2 data-i="contactTitle">Votre prochaine idée commence ici.</h2>
-<p data-i="contactDesc">Vous avez un projet ? Contactez-nous pour obtenir un devis personnalisé.</p>
-<a class="contact-link" href="https://wa.me/213541394278" target="_blank"><span>◉</span> WhatsApp : +213 541 394 278</a>
-<a class="contact-link" href="https://www.instagram.com/sdl.digitalstudio/" target="_blank"><span>◎</span> Instagram : @sdl.digitalstudio</a>
-</div>
-<form class="form" id="contactForm">
-<label for="name" data-i="nameLabel">Nom complet</label>
-<input id="name" name="name" required placeholder="Votre nom">
-<label for="email" data-i="emailLabel">Adresse e-mail</label>
-<input id="email" name="email" type="email" required placeholder="email@exemple.com">
-<label for="service" data-i="serviceLabel">Service souhaité</label>
-<select id="service" name="service" required>
-<option value="" data-i="choose">Choisir un service</option>
-<option>Site Web</option><option>Landing Page</option><option>E-commerce</option><option data-i="other">Autre</option>
-</select>
-<label for="message" data-i="messageLabel">Parlez-nous de votre projet</label>
-<textarea id="message" name="message" required placeholder="Décrivez votre idée..."></textarea>
-<button class="btn" type="submit" data-i="sendBtn">Demander un devis ↗</button>
-</form>
-</div>
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <div class="eyebrow" data-i="contactEyebrow">PARLONS DE VOTRE PROJET</div>
+      <h2 data-i="contactTitle">Votre prochaine idée commence ici.</h2>
+      <p data-i="contactDesc">Vous avez un projet ? Contactez-nous pour obtenir un devis personnalisé.</p>
+      <a class="contact-link" href="https://wa.me/213541394278" target="_blank" rel="noopener"><span>◉</span>WhatsApp : +213 541 394 278</a>
+      <a class="contact-link" href="https://www.instagram.com/sdl.digitalstudio/" target="_blank" rel="noopener"><span>◎</span>Instagram : @sdl.digitalstudio</a>
+    </div>
+    <form class="form" id="contactForm">
+      <label for="name" data-i="nameLabel">Nom complet</label>
+      <input id="name" name="name" required autocomplete="name" placeholder="Votre nom" data-placeholder-i="namePlaceholder">
+      <label for="email" data-i="emailLabel">Adresse e-mail</label>
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="email@exemple.com" data-placeholder-i="emailPlaceholder">
+      <label for="service" data-i="serviceLabel">Service souhaité</label>
+      <select id="service" name="service" required>
+        <option value="" data-i="choose">Choisir un service</option>
+        <option value="Site Web" data-i="optionSite">Site Web</option>
+        <option value="Landing Page" data-i="optionLanding">Landing Page</option>
+        <option value="E-commerce" data-i="optionEcom">E-commerce</option>
+        <option value="Autre" data-i="other">Autre</option>
+      </select>
+      <label for="message" data-i="messageLabel">Parlez-nous de votre projet</label>
+      <textarea id="message" name="message" required placeholder="Décrivez votre idée..." data-placeholder-i="messagePlaceholder"></textarea>
+      <button class="btn" type="submit" data-i="sendBtn">Demander un devis</button>
+    </form>
+  </div>
 </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
-<div class="container">
-<div class="footer-row">
-<div><a class="logo" href="#">SD<span>.</span>digitalstudio</a><p>We build your digital presence.</p></div>
-<div class="footer-links"><a href="#services" data-i="nav2">Services</a><a href="#portfolio" data-i="nav3">Réalisations</a><a href="#contact" data-i="nav5">Contact</a></div>
-</div>
-<div class="copyright">© 2026 SD.digitalstudio. All rights reserved.</div>
-</div>
+  <div class="container">
+    <div class="footer-row">
+      <div><a class="logo" href="#home">SD<span>.</span>digitalstudio</a><p data-i="footerTagline">We build your digital presence.</p></div>
+      <div class="footer-links">
+        <a href="#services" data-i="nav2">Services</a>
+        <a href="#portfolio" data-i="nav3">Réalisations</a>
+        <a href="#contact" data-i="nav5">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 SD.digitalstudio. All rights reserved.</div>
+  </div>
 </footer>
-<a class="whatsapp" href="https://wa.me/213541394278" target="_blank" aria-label="WhatsApp">◉</a>
+
+<a class="whatsapp" href="https://wa.me/213541394278" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
 
 <script>
+/* TRANSLATIONS */
 const translations={
+fr:{
+nav1:"Accueil",nav2:"Services",nav3:"Réalisations",nav4:"À propos",nav5:"Contact",
+heroEyebrow:"STUDIO DIGITAL CRÉATIF",
+heroTitle:'Your business deserves a <span>powerful digital presence.</span>',
+heroDesc:"Nous créons des expériences digitales élégantes pour développer votre activité.",
+heroBtn:"Découvrir nos services",heroContact:"Parlons de votre projet",
+heroNote:"Design créatif · Expérience digitale · Résultats",
+floatingTitle:"Creative Design",floatingDesc:"Made for your brand",
+servicesEyebrow:"NOS EXPERTISES",servicesTitle:"Des solutions digitales pour votre croissance.",
+servicesDesc:"Tout ce dont votre activité a besoin pour se démarquer en ligne.",
+s1title:"Site Web",s1desc:"Des sites web modernes, professionnels et adaptés à votre image de marque.",
+s2title:"Landing Page",s2desc:"Des pages stratégiques conçues pour attirer l'attention et convertir vos visiteurs.",
+s3title:"E-commerce",s3desc:"Des boutiques en ligne élégantes pour présenter et vendre vos produits.",
+learn:"En savoir plus",
+portfolioEyebrow:"NOTRE UNIVERS",portfolioTitle:"Quelques idées, un grand potentiel.",
+portfolioDesc:"Des exemples de concepts créatifs imaginés pour différentes activités.",
+concept:"CONCEPT",p1title:"Restaurant & Food",p1desc:"Un univers digital pour la restauration.",
+p2title:"Brand Landing Page",p2desc:"Une présentation raffinée pour une marque.",
+p3title:"Fashion E-commerce",p3desc:"Une boutique en ligne dédiée à la mode.",
+aboutEyebrow:"QUI SOMMES-NOUS ?",aboutTitle:"Le digital, avec une vision.",
+aboutP1:"SD.digitalstudio accompagne les entrepreneurs et les marques dans la création de leur présence digitale.",
+aboutP2:"Nous proposons des solutions modernes, élégantes et adaptées aux besoins de chaque projet.",
+feature1:"Design moderne",feature2:"Solutions sur mesure",feature3:"Accompagnement personnalisé",
+processEyebrow:"COMMENT ÇA MARCHE",processTitle:"De l'idée au lancement.",
+processDesc:"Un processus simple pour donner vie à votre projet.",
+step1:"Discussion",step1d:"Nous échangeons sur votre idée et vos objectifs.",
+step2:"Design",step2d:"Nous imaginons une expérience adaptée à votre marque.",
+step3:"Développement",step3d:"Nous construisons et développons votre site.",
+step4:"Lancement",step4d:"Votre projet est prêt à être publié en ligne.",
+faqTitle:"Questions fréquentes.",
+q1:"Combien coûte la création d'un site web ?",a1:"Chaque projet est différent. Contactez-nous pour recevoir un devis personnalisé selon vos besoins.",
+q2:"Combien de temps faut-il pour créer un site ?",a2:"Le délai dépend du type de site, de ses fonctionnalités et du contenu à intégrer.",
+q3:"Le site sera-t-il adapté aux téléphones ?",a3:"Oui, nos créations sont pensées pour les mobiles, tablettes et ordinateurs.",
+q4:"Puis-je demander des modifications ?",a4:"Bien sûr. Les besoins et les modifications sont discutés ensemble avant la livraison.",
+contactEyebrow:"PARLONS DE VOTRE PROJET",contactTitle:"Votre prochaine idée commence ici.",
+contactDesc:"Vous avez un projet ? Contactez-nous pour obtenir un devis personnalisé.",
+nameLabel:"Nom complet",emailLabel:"Adresse e-mail",serviceLabel:"Service souhaité",
+choose:"Choisir un service",optionSite:"Site Web",optionLanding:"Landing Page",optionEcom:"E-commerce",other:"Autre",
+messageLabel:"Parlez-nous de votre projet",sendBtn:"Demander un devis",
+namePlaceholder:"Votre nom",emailPlaceholder:"email@exemple.com",messagePlaceholder:"Décrivez votre idée...",
+footerTagline:"We build your digital presence."
+},
 ar:{
 nav1:"الرئيسية",nav2:"خدماتنا",nav3:"أعمالنا",nav4:"من نحن",nav5:"اتصل بنا",
 heroEyebrow:"استوديو إبداعي رقمي",
 heroTitle:'مشروعك يستحق حضوراً رقمياً <span>قوياً ومميزاً.</span>',
-heroDesc:"نصمّم تجارب رقمية احترافية تساعد مشروعك على النمو والتميز.",
-heroBtn:"اكتشف خدماتنا ↗",heroContact:"لنتحدث عن مشروعك",
+heroDesc:"نصمّم تجارب رقمية احترافية وأنيقة تساعد مشروعك على النمو والتميز.",
+heroBtn:"اكتشف خدماتنا",heroContact:"لنتحدث عن مشروعك",
+heroNote:"تصميم إبداعي · تجربة رقمية · نتائج",
+floatingTitle:"تصميم إبداعي",floatingDesc:"مصمم لهوية مشروعك",
 servicesEyebrow:"خبراتنا",servicesTitle:"حلول رقمية تساعد مشروعك على النمو.",
 servicesDesc:"كل ما يحتاجه نشاطك ليتميز على الإنترنت.",
 s1title:"موقع إلكتروني",s1desc:"مواقع عصرية واحترافية تعكس هوية علامتك التجارية.",
-s2desc:"صفحات مصممة لجذب الانتباه وتحويل الزوار إلى عملاء.",
+s2title:"صفحة هبوط",s2desc:"صفحات مصممة لجذب الانتباه وتحويل الزوار إلى عملاء.",
 s3title:"متجر إلكتروني",s3desc:"متاجر إلكترونية أنيقة لعرض منتجاتك وبيعها.",
-learn:"اكتشف المزيد ↗",
+learn:"اكتشف المزيد",
 portfolioEyebrow:"أعمالنا",portfolioTitle:"أفكار إبداعية وإمكانيات كبيرة.",
 portfolioDesc:"نماذج تجريبية صممناها لأنشطة ومجالات مختلفة.",
 concept:"نموذج تجريبي",p1title:"مطعم ومأكولات",p1desc:"هوية رقمية مميزة لمجال المطاعم.",
@@ -330,37 +729,145 @@ q3:"هل سيكون الموقع متوافقاً مع الهاتف؟",a3:"نع�
 q4:"هل يمكنني طلب تعديلات؟",a4:"بالتأكيد، نتفق معك على الاحتياجات والتعديلات قبل التسليم.",
 contactEyebrow:"لنتحدث عن مشروعك",contactTitle:"فكرتك القادمة تبدأ من هنا.",
 contactDesc:"هل لديك مشروع؟ تواصل معنا للحصول على عرض سعر يناسب احتياجاتك.",
-nameLabel:"الاسم الكامل",emailLabel:"البريد الإلكتروني",serviceLabel:"الخدمة المطلوبة",choose:"اختر الخدمة",other:"أخرى",messageLabel:"حدثنا عن مشروعك",sendBtn:"اطلب عرض سعر ↗"
-}};
+nameLabel:"الاسم الكامل",emailLabel:"البريد الإلكتروني",serviceLabel:"الخدمة المطلوبة",
+choose:"اختر الخدمة",optionSite:"موقع إلكتروني",optionLanding:"صفحة هبوط",optionEcom:"متجر إلكتروني",other:"أخرى",
+messageLabel:"حدثنا عن مشروعك",sendBtn:"اطلب عرض سعر",
+namePlaceholder:"اكتب اسمك",emailPlaceholder:"البريد الإلكتروني",messagePlaceholder:"اشرح لنا فكرتك...",
+footerTagline:"نصنع حضورك الرقمي."
+}
+};
+
+/* LANGUAGE SWITCH */
 let currentLang="fr";
-const langBtn=document.getElementById("langBtn");
-langBtn.addEventListener("click",()=>{
-currentLang=currentLang==="fr"?"ar":"fr";
-document.documentElement.lang=currentLang;
-document.documentElement.dir=currentLang==="ar"?"rtl":"ltr";
-langBtn.textContent=currentLang==="ar"?"Français":"العربية";
-document.querySelectorAll("[data-i]").forEach(el=>{
-const key=el.dataset.i;
-if(currentLang==="ar"&&translations.ar[key])el.innerHTML=translations.ar[key];
-else if(currentLang==="fr")location.reload();
+function setLanguage(lang){
+  currentLang=lang;
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  document.getElementById("langBtn").textContent=lang==="ar"?"Français":"العربية";
+
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const key=el.dataset.i;
+    if(translations[lang][key]!==undefined)el.innerHTML=translations[lang][key];
+  });
+
+  document.querySelectorAll("[data-placeholder-i]").forEach(el=>{
+    const key=el.dataset.placeholderI;
+    if(translations[lang][key]!==undefined)el.placeholder=translations[lang][key];
+  });
+}
+document.getElementById("langBtn").addEventListener("click",()=>{
+  setLanguage(currentLang==="fr"?"ar":"fr");
 });
+
+/* MOBILE MENU */
+const menuBtn=document.getElementById("menuBtn");
+const navlinks=document.getElementById("navlinks");
+menuBtn.addEventListener("click",()=>{
+  const isOpen=navlinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded",String(isOpen));
+  menuBtn.textContent=isOpen?"×":"☰";
 });
-document.getElementById("menuBtn").addEventListener("click",()=>{
-document.getElementById("navlinks").classList.toggle("open");
+document.querySelectorAll(".navlinks a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    navlinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded","false");
+    menuBtn.textContent="☰";
+  });
 });
-document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>{
-document.getElementById("navlinks").classList.remove("open");
-}));
+
+/* CINEMATIC WEBSITE SLIDESHOW */
+const slides=[...document.querySelectorAll(".preview-slide")];
+const phoneBrand=document.getElementById("phoneBrand");
+const phoneArt=document.getElementById("phoneArt");
+const phoneTitle=document.getElementById("phoneTitle");
+const phoneDesc=document.getElementById("phoneDesc");
+const phoneButton=document.getElementById("phoneButton");
+const phoneScreen=document.getElementById("phoneScreen");
+
+const phoneSlides=[
+  {brand:"YOUR BRAND.",title:"Beautiful<br>by Design.",desc:"Designed for your next big idea.",button:"EXPLORE",background:"linear-gradient(135deg,#6B4F3B,#D8B4FE)",screen:"#F5F0E9",buttonColor:"#3B2B22"},
+  {brand:"MAISON.",title:"Elegance<br>Everywhere.",desc:"A timeless world of details.",button:"DISCOVER",background:"linear-gradient(135deg,#b68d66,#3B2B22)",screen:"#e9ded0",buttonColor:"#6B4F3B"},
+  {brand:"ATELIER MODE",title:"Style Your<br>Story.",desc:"Discover the new collection.",button:"SHOP NOW",background:"linear-gradient(135deg,#D8B4FE,#73518e)",screen:"#27202c",buttonColor:"#8064a1"}
+];
+
+let activeSlide=0;
+function showSlide(index){
+  activeSlide=index;
+  slides.forEach((slide,i)=>slide.classList.toggle("active",i===index));
+  const data=phoneSlides[index];
+  phoneBrand.textContent=data.brand;
+  phoneTitle.innerHTML=data.title;
+  phoneDesc.textContent=data.desc;
+  phoneButton.textContent=data.button;
+  phoneArt.style.background=data.background;
+  phoneScreen.style.background=data.screen;
+  phoneScreen.style.color=index===2?"#fff":"#3B2B22";
+  phoneButton.style.background=data.buttonColor;
+  phoneDesc.style.color=index===2?"#d1c3d8":"#77695e";
+}
+let slideTimer=setInterval(()=>showSlide((activeSlide+1)%slides.length),4200);
+
+/* DESKTOP 3D PARALLAX */
+const heroVisual=document.getElementById("heroVisual");
+const laptop=document.getElementById("laptop");
+const phone=document.getElementById("phone");
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer=window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+if(!reduceMotion && finePointer){
+  heroVisual.addEventListener("mousemove",e=>{
+    const rect=heroVisual.getBoundingClientRect();
+    const x=(e.clientX-rect.left)/rect.width-.5;
+    const y=(e.clientY-rect.top)/rect.height-.5;
+
+    laptop.style.marginLeft=(x*9)+"px";
+    laptop.style.marginTop=(y*8)+"px";
+    laptop.style.animationPlayState="paused";
+    laptop.style.transform=`rotateY(${-13+x*9}deg) rotateX(${5-y*7}deg) translate3d(0,${-7-y*7}px,12px)`;
+
+    phone.style.marginLeft=(-x*13)+"px";
+    phone.style.marginTop=(-y*10)+"px";
+  });
+
+  heroVisual.addEventListener("mouseleave",()=>{
+    laptop.style.marginLeft="0px";
+    laptop.style.marginTop="0px";
+    laptop.style.animationPlayState="running";
+    laptop.style.transform="";
+    phone.style.marginLeft="0px";
+    phone.style.marginTop="0px";
+  });
+}
+
+/* CONTACT FORM TO WHATSAPP */
 document.getElementById("contactForm").addEventListener("submit",function(e){
-e.preventDefault();
-const name=document.getElementById("name").value.trim();
-const email=document.getElementById("email").value.trim();
-const service=document.getElementById("service").value;
-const message=document.getElementById("message").value.trim();
-const intro=currentLang==="ar"?"مرحباً SD.digitalstudio، أود طلب عرض سعر.":"Bonjour SD.digitalstudio, je souhaite demander un devis.";
-const body=intro+"\n\nNom : "+name+"\nEmail : "+email+"\nService : "+service+"\nProjet : "+message;
-window.open("https://wa.me/213541394278?text="+encodeURIComponent(body),"_blank");
+  e.preventDefault();
+
+  const name=document.getElementById("name").value.trim();
+  const email=document.getElementById("email").value.trim();
+  const service=document.getElementById("service").value;
+  const message=document.getElementById("message").value.trim();
+
+  const intro=currentLang==="ar"
+    ?"مرحباً SD.digitalstudio، أود طلب عرض سعر."
+    :"Bonjour SD.digitalstudio, je souhaite demander un devis.";
+
+  const serviceLabel=currentLang==="ar"?"الخدمة":"Service";
+  const nameLabel=currentLang==="ar"?"الاسم":"Nom";
+  const emailLabel=currentLang==="ar"?"البريد الإلكتروني":"Email";
+  const messageLabel=currentLang==="ar"?"المشروع":"Projet";
+
+  const body=intro+
+    "\n\n"+nameLabel+" : "+name+
+    "\n"+emailLabel+" : "+email+
+    "\n"+serviceLabel+" : "+service+
+    "\n"+messageLabel+" : "+message;
+
+  const whatsappURL="https://wa.me/213541394278?text="+encodeURIComponent(body);
+  window.open(whatsappURL,"_blank","noopener");
 });
 </script>
+
 </body>
 </html>
+
